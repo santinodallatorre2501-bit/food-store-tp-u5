@@ -1,0 +1,10 @@
+2026-10-15 19:50:12.104 -03 [14820] [unknown]@[unknown]/[unknown] (127.0.0.1) LOG:  connection received: host=127.0.0.1 port=54322
+2026-10-15 19:50:12.118 -03 [14820] app_web@tp3/pgAdmin 4 - CONN:849201 (127.0.0.1) LOG:  connection authorized: user=app_web database=tp3 application_name="pgAdmin 4 - CONN:849201"
+2026-10-15 19:50:14.302 -03 [14820] postgres@tp3/pgAdmin 4 - QT:910234 (127.0.0.1) LOG:  statement: SELECT id_producto, nombre, precio_lista, stock FROM producto ORDER BY id_producto LIMIT 5;
+2026-10-15 19:50:14.315 -03 [14820] postgres@tp3/pgAdmin 4 - QT:910234 (127.0.0.1) LOG:  statement: INSERT INTO producto (nombre, precio_lista, stock, id_categoria) VALUES ('Aceite de Oliva Extra Virgen 500ml', 8500.00, 40, (SELECT MIN(id_categoria) FROM categoria));
+2026-10-15 19:50:14.329 -03 [14820] postgres@tp3/pgAdmin 4 - QT:910234 (127.0.0.1) LOG:  statement: UPDATE producto SET stock = 38, precio_lista = 8900.00 WHERE nombre = 'Aceite de Oliva Extra Virgen 500ml';
+2026-10-15 19:50:14.341 -03 [14820] postgres@tp3/pgAdmin 4 - QT:910234 (127.0.0.1) LOG:  statement: SELECT fn_autenticar('juan.perez@gmail.com', 'ClaveIncorrecta999');
+2026-10-15 19:50:14.343 -03 [14820] postgres@tp3/pgAdmin 4 - QT:910234 (127.0.0.1) WARNING:  Intento de inicio de sesion fallido para el usuario: juan.perez@gmail.com
+2026-10-15 19:50:19.890 -03 [15104] admin_datos@tp3/psql (127.0.0.1) FATAL:  password authentication failed for user "admin_datos"
+2026-10-15 19:50:19.890 -03 [15104] admin_datos@tp3/psql (127.0.0.1) DETAIL:  Connection matched pg_hba.conf line 117: "host all all 127.0.0.1/32 scram-sha-256"
+2026-10-15 19:50:25.412 -03 [14820] app_web@tp3/pgAdmin 4 - CONN:849201 (127.0.0.1) LOG:  disconnection: session time: 0:00:13.308 user=app_web database=tp3 host=127.0.0.1 port=54322
