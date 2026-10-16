@@ -1,0 +1,15 @@
+2026-10-16 01:15:02.110 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  connection authorized: user=app_web database=tp3
+2026-10-16 01:15:03.401 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: SELECT fn_autenticar('usr_003@anon.foodstore.local', 'PASS_INTENTO_1');
+2026-10-16 01:15:03.403 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) WARNING:  Intento de inicio de sesion fallido para el usuario: usr_003@anon.foodstore.local
+2026-10-16 01:15:04.112 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: SELECT fn_autenticar('usr_003@anon.foodstore.local', 'PASS_INTENTO_2');
+2026-10-16 01:15:04.114 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) WARNING:  Intento de inicio de sesion fallido para el usuario: usr_003@anon.foodstore.local
+2026-10-16 01:15:04.890 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: SELECT fn_autenticar('usr_003@anon.foodstore.local', 'PASS_INTENTO_3');
+2026-10-16 01:15:04.891 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) WARNING:  Intento de inicio de sesion fallido para el usuario: usr_003@anon.foodstore.local
+2026-10-16 01:15:05.510 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: SELECT fn_autenticar('usr_003@anon.foodstore.local', 'PASS_VALIDA_HASH');
+2026-10-16 01:15:05.512 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) NOTICE:  Inicio de sesion exitoso para el usuario: usr_003@anon.foodstore.local
+2026-10-16 01:15:08.220 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: SELECT id_usuario, nombre, apellido, email, telefono, direccion, rol, fecha_alta, activo FROM usuario;
+2026-10-16 01:15:11.005 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: GRANT admin_datos TO app_web;
+2026-10-16 01:15:11.006 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) ERROR:  permission denied to grant role "admin_datos"
+2026-10-16 01:15:12.340 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  statement: DELETE FROM usuario WHERE rol = 'admin';
+2026-10-16 01:15:12.341 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) ERROR:  permission denied for table usuario
+2026-10-16 01:15:15.002 -03 [18412] app_web@tp3/pgAdmin 4 (10.0.0.55) LOG:  disconnection: session time: 0:00:12.892 user=app_web database=tp3 host=10.0.0.55
